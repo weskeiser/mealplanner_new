@@ -116,6 +116,7 @@ export const validateProductValuesService = (product: Product) => {
   if (includesUndefinedValues) {
     throw {
       status: 400,
+      // Update text to specify missing and add vitamins
       message:
         "One or more of the following keys are missing: name, description, serving, calories,  protein, totalFat, saturated, trans, monounsaturated, polyunsaturated, cholesterol, totalCarbs, sugar, added_sugar, fiber, salt, source",
     };
