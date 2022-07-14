@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon -r tsconfig-paths/register ./index.ts"
+    "dev": "nodemon -r tsconfig-paths/register ./index.ts",
+    "typecheck": "tsc",
+    "typecheck:watch": "tsc -w"
   },
   "keywords": [],
   "author": "",

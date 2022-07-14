@@ -105,13 +105,16 @@ export const validateProductValuesService = (product: Product) => {
     phosphorus,
     iodine,
   ];
-  const includesUndefinedValues = values.reduce((prev, curr) => {
-    if (curr === undefined) {
-      prev = true;
-      return prev;
-    }
-    return prev;
-  }, false);
+  // const includesUndefinedValues = values.reduce((prev, curr) => {
+  //   if (curr === undefined) {
+  //     prev = true;
+  //     return prev;
+  //   }
+  //   return prev;
+  // }, false);
+  const includesUndefinedValues = values.some((value) => {
+    value === undefined;
+  });
 
   if (includesUndefinedValues) {
     throw {
